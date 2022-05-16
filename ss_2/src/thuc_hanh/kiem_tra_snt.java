@@ -1,0 +1,26 @@
+package thuc_hanh;
+
+import java.util.Scanner;
+
+public class kiem_tra_snt {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input number");
+        int number = sc.nextInt();
+        boolean flg = true;
+        if (number < 2) {
+            System.out.println(number + " không phải là SNT");
+        } else {
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    System.out.println(number + " không phải là SNT");
+                    flg = false;
+                    break;
+                }
+            }
+            if (flg) {
+                System.out.println(number + " là SNT");
+            }
+        }
+    }
+}
