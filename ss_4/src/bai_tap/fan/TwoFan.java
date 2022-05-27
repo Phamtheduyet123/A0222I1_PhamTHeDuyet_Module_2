@@ -1,5 +1,8 @@
 package bai_tap.fan;
 
+
+import thuc_hanh.lop_hinh_chu_nhat.Rectangle;
+
 public class TwoFan {
     public static void main(String[] args) {
         Fan s1 = new Fan();

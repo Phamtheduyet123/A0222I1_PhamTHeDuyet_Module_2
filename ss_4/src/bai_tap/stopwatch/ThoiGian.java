@@ -1,8 +1,8 @@
 package bai_tap.stopwatch;
 
+
+
 import bai_tap.fan.Fan;
-import bai_tap.phuong_trinh_bac_hai.QuadraticEquation;
-import com.sun.org.apache.xerces.internal.xs.ItemPSVI;
 
 import java.util.Arrays;
 import java.util.Scanner;
