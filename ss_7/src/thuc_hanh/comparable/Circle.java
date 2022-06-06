@@ -1,7 +1,9 @@
-package thuc_hanh.he_thong_cac_doi_tuong_hinh_hoc;
+package thuc_hanh.comparable;
 
-public class Circle extends Shape{
+public class Circle {
     double radius;
+    String color;
+    boolean filled;
     public Circle(){
         this.radius=1.0;
     }
@@ -9,7 +11,7 @@ public class Circle extends Shape{
         this.radius = radius;
     }
     public Circle(double radius, String color,boolean filled){
-       this(radius);
+        this(radius);
         this.color = color;
         this.filled = filled;
     }

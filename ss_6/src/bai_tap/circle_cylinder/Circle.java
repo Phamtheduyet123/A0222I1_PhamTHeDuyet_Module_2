@@ -23,6 +23,7 @@ public class Circle {
     Circle(){
 
     }
+
     Circle(double radius, String color){
         this.radius = radius;
         this.color = color;
