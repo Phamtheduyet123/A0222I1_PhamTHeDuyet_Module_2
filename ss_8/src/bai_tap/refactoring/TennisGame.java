@@ -17,35 +17,39 @@ public class TennisGame {
         } else if (playerOneScore >= 4 || playerTwoScore >= 4) {
             return diplayAdvantageOrWin(player1Name, player2Name, playerOneScore, playerTwoScore);
         } else {
-            return  diplayAdvantageOrWin(player1Name,player2Name,playerOneScore,playerTwoScore);
+            return displayScore(playerOneScore,playerTwoScore);
         }
     }
-        private static String displayDeuce(int score){
-            return translateScore(score) + "-" + ALL;
-        }
-        private static String translateScore(int score){
-            switch (score) {
-                case 0:
-                    return ZERO_SCORE;
-                case 1:
-                    return ONE_SCORE;
-                case 2:
-                    return TWO_SCORE;
-                case 3:
-                    return THREE_SCORE;
-                default:
-                    return DEUCE;
 
-            }
+    private static String displayDeuce(int score) {
+        return translateScore(score) + "-" + ALL;
+    }
+
+    private static String translateScore(int score) {
+        switch (score) {
+            case 0:
+                return ZERO_SCORE;
+            case 1:
+                return ONE_SCORE;
+            case 2:
+                return TWO_SCORE;
+            case 3:
+                return THREE_SCORE;
+            default:
+                return DEUCE;
+
         }
-        private static String diplayAdvantageOrWin(String player1Name, String player2Name,int playerOneScore,int playerTwoScore){
-            int minusResult = playerOneScore - playerTwoScore;
-            if (minusResult == 1) return "Advantage " + " " + player1Name;
-            else if (minusResult == -1) return "Advantage " + " " + player2Name;
-            else if (minusResult >= 2) return "Win " + " " + player2Name;
-            else return "Win " + " " + player1Name;
-        }
-        private static String displayScore ( int playerOneScore, int playerTwoScore){
-            return translateScore(playerOneScore) + "-" + translateScore(playerTwoScore);
-        }
+    }
+
+    private static String diplayAdvantageOrWin(String player1Name, String player2Name, int playerOneScore, int playerTwoScore) {
+        int minusResult = playerOneScore - playerTwoScore;
+        if (minusResult == 1) return "Advantage " + " " + player1Name;
+        else if (minusResult == -1) return "Advantage " + " " + player2Name;
+        else if (minusResult >= 2) return "Win " + " " + player2Name;
+        else return "Win " + " " + player1Name;
+    }
+
+    private static String displayScore(int playerOneScore, int playerTwoScore) {
+        return translateScore(playerOneScore) + "-" + translateScore(playerTwoScore);
+    }
 }
