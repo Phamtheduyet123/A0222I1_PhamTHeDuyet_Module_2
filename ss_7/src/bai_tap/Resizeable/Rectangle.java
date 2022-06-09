@@ -17,7 +17,9 @@ public class Rectangle extends Shape implements Resizeable{
         this.width = width;
         this.length = length;
     }
-
+    public static void ABC(){
+        System.out.println("asc");
+    }
     public double getWidth() {
         return width;
     }

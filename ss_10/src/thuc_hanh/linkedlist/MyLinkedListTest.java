@@ -1,9 +1,12 @@
 package thuc_hanh.linkedlist;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class MyLinkedListTest {
     public static void main(String[] args) {
             System.out.println("/=/=/=/= TESTING /=/=/=/=");
-            MyLinkedList ll = new MyLinkedList(10);
+            MyLinkedList ll = new MyLinkedList();
             ll.addFirst(11);
             ll.addFirst(12);
             ll.addFirst(13);
@@ -15,5 +18,12 @@ public class MyLinkedListTest {
             ll.add(9,88);
 
             ll.printList();
+
+
+            LinkedList<Integer> list = new LinkedList<>();
+        list.addFirst(11);
+        list.addFirst(12);
+        list.addFirst(13);
+        list.add(4,100);
     }
 }

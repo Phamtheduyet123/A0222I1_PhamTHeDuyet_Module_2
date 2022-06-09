@@ -6,12 +6,12 @@ public class MyLinkedList {
     private Node head;
     private int numNodes=0;
 
-    public MyLinkedList(Object data) {
-        head = new Node(data);
+    public MyLinkedList() {
     }
 
     private class Node {
         private Node next;
+
         private Object data;
 
         public Node(Object data) {
