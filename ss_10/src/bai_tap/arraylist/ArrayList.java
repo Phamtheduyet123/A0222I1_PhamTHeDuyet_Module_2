@@ -1,8 +1,5 @@
 package bai_tap.arraylist;
 
-import com.sun.org.apache.bcel.internal.generic.ATHROW;
-import thuc_hanh.linkedlist.MyLinkedList;
-
 import java.util.Arrays;
 
 public class ArrayList<E> {

@@ -7,7 +7,7 @@ public class MyLinkedListTest {
     public static void main(String[] args) {
             System.out.println("/=/=/=/= TESTING /=/=/=/=");
             MyLinkedList ll = new MyLinkedList();
-            ll.addFirst(11);
+            ll.addFirst("abc");
             ll.addFirst(12);
             ll.addFirst(13);
             ll.printList();
@@ -24,6 +24,6 @@ public class MyLinkedListTest {
         list.addFirst(11);
         list.addFirst(12);
         list.addFirst(13);
-        list.add(4,100);
+      
     }
 }

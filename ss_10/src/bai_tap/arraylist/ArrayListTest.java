@@ -8,6 +8,7 @@ public class ArrayListTest {
         arrayList.addFirst(6);
         arrayList.addFirst(8);
         arrayList.addFirst(9);
+
         arrayList.add(3,10);
         arrayList.add(4,12);
         arrayList.remove(4);
