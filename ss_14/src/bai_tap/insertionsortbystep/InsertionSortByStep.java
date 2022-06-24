@@ -1,13 +1,16 @@
 package bai_tap.insertionsortbystep;
 
 public class InsertionSortByStep {
-        static int[] list = {12, 3, 8, 5, 4, 7, 9, 10, 23, 1};
+        static int[] list = { 3,5,8,12, 4, 7, 9, 10, 23, 1};
 
         public static void insertionSort(int[] list) {
             int x, pos;
             for (int i = 1; i < list.length; i++) {
                 pos = i;
                 x = list[i];
+                if(x>list[pos-1]){
+                    System.out.println("Because "+list[pos-1]+" < "+x+" No Swap");
+                }
                 while (pos > 0 && x < list[pos-1]) {
 //                list[pos] = list[pos-1]; // đổi chỗ
                     /* Swap list[i] with list[i + 1] */
@@ -15,6 +18,7 @@ public class InsertionSortByStep {
                     int temp = list[pos-1];
                     list[pos-1]=list[pos];
                     list[pos]= temp;
+
                     pos--;
                 }
 //            list[pos] = x;
