@@ -2,8 +2,9 @@ package bai_tap.quan_ly_san_pham;
 
 import java.io.Serializable;
 
-public class Product {
-    int id;
+public class Product implements Serializable{
+    static int id=-1;
+    int count;
     String nameProduct;
     String manufacturer;
     double price;
@@ -12,11 +13,11 @@ public class Product {
     }
 
     public int getId() {
-        return id;
+        return count;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int count) {
+        this.count = count;
     }
 
     public String getNameProduct() {
@@ -43,8 +44,9 @@ public class Product {
         this.price = price;
     }
 
-    public Product(int id, String nameProduct, String manufacturer, double price) {
-        this.id = id;
+    public Product(String nameProduct, String manufacturer, double price) {
+    id+=1;
+        this.count=id;
         this.nameProduct = nameProduct;
         this.manufacturer = manufacturer;
         this.price = price;
@@ -53,7 +55,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "id=" + id +
+                "id=" + count +
                 ", nameProduct='" + nameProduct + '\'' +
                 ", manufacturer='" + manufacturer + '\'' +
                 ", price=" + price +
