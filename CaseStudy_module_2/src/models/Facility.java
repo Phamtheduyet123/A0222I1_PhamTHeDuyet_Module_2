@@ -1,11 +1,16 @@
 package models;
 
+import java.security.PublicKey;
+import java.util.List;
+
 public abstract class Facility {
     String serviceName;
     double usableArea;
     double rentalCosts;
     int maximumQuantity;
     int typeRent;
+    public Facility() {
+    }
     public Facility(String serviceName, double usableArea, double rentalCosts, int maximumQuantity, int typeRent) {
         this.serviceName = serviceName;
         this.usableArea = usableArea;
@@ -52,9 +57,6 @@ public abstract class Facility {
 
     public void setTypeRent(int typeRent) {
         this.typeRent = typeRent;
-    }
-
-    public Facility() {
     }
 
     @Override

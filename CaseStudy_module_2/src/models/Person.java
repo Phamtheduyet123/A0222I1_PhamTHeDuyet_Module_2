@@ -3,15 +3,13 @@ package models;
 import java.util.Date;
 
 public abstract class Person {
-    int id;
     String name;
-    Date dateOfBirth;
-    boolean gender;
+    String dateOfBirth;
+    String gender;
     double CMND;
     double phoneNumber;
     String email;
-    public Person(int id, String name, Date dateOfBirth, boolean gender, int CMND, int phoneNumber, String email) {
-        this.id = id;
+    public Person(String name, String dateOfBirth, String gender, double CMND, double phoneNumber, String email) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
@@ -23,14 +21,6 @@ public abstract class Person {
     public Person() {
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
@@ -39,19 +29,19 @@ public abstract class Person {
         this.name = name;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public boolean isGender() {
+    public String isGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

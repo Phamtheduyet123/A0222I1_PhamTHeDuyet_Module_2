@@ -3,6 +3,11 @@ package models;
 import java.util.Date;
 
 public class Employee extends Person{
+    static int count ;
+    static {
+        count=-1;
+    }
+    int id;
     String level;
     String position;
     double wage;
@@ -16,11 +21,21 @@ public class Employee extends Person{
         this.wage = wage;
     }
 
-    public Employee(int id, String name, Date dateOfBirth, boolean gender, int CMND, int phoneNumber, String email, String level, String position, double wage) {
-        super(id, name, dateOfBirth, gender, CMND, phoneNumber, email);
+    public Employee(String name, String dateOfBirth, String gender, double CMND, double phoneNumber, String email, String level, String position, double wage) {
+        super(name, dateOfBirth, gender, CMND, phoneNumber, email);
+        count+=1;
+        this.id=count;
         this.level = level;
         this.position = position;
         this.wage = wage;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLevel() {

@@ -3,6 +3,11 @@ package models;
 import java.util.Date;
 
 public class Customer extends Person {
+    static int count ;
+    static {
+        count =-1;
+    }
+    int id;
     String typeOfGuest;
     String address;
     public Customer() {
@@ -13,10 +18,20 @@ public class Customer extends Person {
         this.address = address;
     }
 
-    public Customer(int id, String name, Date dateOfBirth, boolean gender, int CMND, int phoneNumber, String email, String typeOfGuest, String address) {
-        super(id, name, dateOfBirth, gender, CMND, phoneNumber, email);
+    public Customer( String name, String dateOfBirth, String gender, double CMND, double phoneNumber, String email, String typeOfGuest, String address) {
+        super(name, dateOfBirth, gender, CMND, phoneNumber, email);
+        count+=1;
+        this.id=count;
         this.typeOfGuest = typeOfGuest;
         this.address = address;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTypeOfGuest() {
@@ -40,7 +55,7 @@ public class Customer extends Person {
         return "Customer{" +
                 "typeOfGuest='" + typeOfGuest + '\'' +
                 ", address='" + address + '\'' +
-                ", id=" + id +
+                ", id=" +id +
                 ", name='" + name + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", gender=" + gender +

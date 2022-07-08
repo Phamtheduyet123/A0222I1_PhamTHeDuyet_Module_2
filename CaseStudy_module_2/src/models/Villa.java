@@ -3,7 +3,7 @@ package models;
 public class Villa extends Facility{
     String roomStandard;
     double swimmingPoolArea;
-
+    int numberOfFloors;
     public String getRoomStandard() {
         return roomStandard;
     }
@@ -28,7 +28,6 @@ public class Villa extends Facility{
         this.numberOfFloors = numberOfFloors;
     }
 
-    int numberOfFloors;
     public Villa() {
     }
 

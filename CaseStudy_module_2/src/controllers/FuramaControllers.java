@@ -1,38 +1,91 @@
 package controllers;
 
 import models.Employee;
+import services.CustomerServiceImpl;
 import services.EmployeeServiceImpl;
+import services.FacilityServiceImpl;
 
 import java.util.Date;
 import java.util.Scanner;
 
 public class FuramaControllers {
     static Scanner sc = new Scanner(System.in);
-    private static void chooseOne(){
-        System.out.println("1.Display list employees\n" +
-                "2.Add new employee\n" +
-                "3.Edit employee\n" +
-                "4.Return main menu");
-        System.out.println("input number you want?");
-        int number = sc.nextInt();
+    private static void chooseOne() {
+        int number ;
         EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
-        switch (number){
-            case 1:
-            case 2:
-
-        }
+        do {
+            System.out.println("1.Display list employees\n" +
+                    "2.Add new employee\n" +
+                    "3.Edit employee\n" +
+                    "4.Return main menu");
+            System.out.println("input number you want?");
+            number = sc.nextInt();
+            switch (number) {
+                case 1:
+                    employeeService.displayListEmployees();
+                    break;
+                case 2:
+                    employeeService.addEmployee();
+                    break;
+                case 3:
+                    employeeService.edit();
+                    break;
+            }
+        }while (number<4);
     }
     private static void chooseTwo(){
-        System.out.println("1.Display list customers\n" +
-                "2.Add new customer\n" +
-                "3.Edit customer\n" +
-                "4.Return main menu");
+        int number ;
+        CustomerServiceImpl customerService = new CustomerServiceImpl();
+        do {
+            System.out.println("1.Display list customers\n" +
+                    "2.Add new customer\n" +
+                    "3.Edit customer\n" +
+                    "4.Return main menu");
+            System.out.println("input number you want?");
+            number = sc.nextInt();
+            switch (number) {
+                case 1:
+                    customerService.displayListCustomer();
+                    break;
+                case 2:
+                   customerService.addCustomer();
+                    break;
+                case 3:
+                   customerService.edit();
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+
+            }
+        }while (number<5);
     }
-    private static void chooseThree(){
-        System.out.println("1.Display list facility\n" +
-                "2.Add new facility\n" +
-                "3.Display list facility maintenance\n" +
-                "4.Return main menu");
+    private static void chooseThree() {
+        int number;
+        FacilityServiceImpl facilityService = new FacilityServiceImpl();
+        do {
+            System.out.println("1.Display list facility\n" +
+                    "2.Add new facility\n" +
+                    "3.Display list facility maintenance\n" +
+                    "4.Return main menu");
+            System.out.println("input number you want?");
+            number = sc.nextInt();
+            switch (number) {
+                case 1:
+                    facilityService.display();
+                    break;
+                case 2:
+                    facilityService.addNewFacility();
+                    break;
+                case 3:
+                    facilityService.displayListFacilityMaintenance();
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+
+            }
+        }while (number<5);
     }
     private  static void chooseFour(){
         System.out.println("1.Add new booking\n" +
@@ -49,15 +102,16 @@ public class FuramaControllers {
     }
 
     public static void main(String[] args) {
-
+        int number;
+        do {
             System.out.println("1.Employee Management\n" +
                     "2.Customer Management\n" +
                     "3.Facility Management \n" +
-                    "4.Booking Management\n " +
+                    "4.Booking Management\n" +
                     "5.Promotion Management\n" +
                     "6.Exit");
             System.out.println("Input number you want?");
-            int number = sc.nextInt();
+            number = sc.nextInt();
             switch (number) {
                 case 1:
                     chooseOne();
@@ -78,6 +132,7 @@ public class FuramaControllers {
                     System.exit(0);
 
             }
+        }while (number<6);
         }
 
     }

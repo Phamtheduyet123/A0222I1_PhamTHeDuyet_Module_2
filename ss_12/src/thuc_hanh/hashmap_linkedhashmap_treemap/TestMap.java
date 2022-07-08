@@ -23,12 +23,13 @@ public class TestMap {
         Map<String, Integer> treeMap = new TreeMap<>(hashMap);
         System.out.println("Display entries in ascending order of key");
         System.out.println(treeMap);
-        Map<String, Integer> linkedHashMap = new LinkedHashMap<>(16, 0.75f, true);
+        Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
         linkedHashMap.put("Smith", 30);
         linkedHashMap.put("Anderson", 31);
         linkedHashMap.put("Lewis", 29);
         linkedHashMap.put("Cook", 29);
         System.out.println("\nThe age for " + "Lewis is " + linkedHashMap.get("Lewis"));
+        System.out.println("------------"+linkedHashMap);
 
   }
 }
